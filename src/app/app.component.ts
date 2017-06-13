@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   // templateUrl: './app.component.html',
   template: `
-    <app-navbar></app-navbar>
+    <app-navbar [tags]="['Fullstack', 'Front-end', 'Microsoft MCP', 'Asp.Net MVC']"></app-navbar>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   `,

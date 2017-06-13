@@ -5,13 +5,7 @@ import { Project } from 'app/models/project';
 @Component({
   selector: 'app-home',
   template: `
-    <section class="jumbotron">
-      <app-quick-presentation title="Jérémy Génard"
-                              [tags]="['Fullstack', 'Front-end', 'Microsoft MCP', 'Asp.Net MVC']"
-                              description="Développeur"
-                              imgSrc="assets/img/jeremy.png">
-      </app-quick-presentation>
-    </section>
+    <app-carousel></app-carousel>
     <hr />
     <h2>Projets</h2>
     <div class="row">

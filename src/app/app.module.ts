@@ -12,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { QuickPresentationComponent } from './components/quick-presentation/quick-presentation.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
     ContactComponent,
     ProjectCardComponent,
     QuickPresentationComponent,
-    HomepageComponent
+    HomepageComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
