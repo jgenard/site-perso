@@ -5,14 +5,12 @@ import { Project } from 'app/models/project';
 @Component({
   selector: 'app-home',
   template: `
-  <div class="container-fluid">
     <h1>Home</h1>
     <div class="row">
       <div class="col" *ngFor="let project of projects">
-        <app-project-card title="{{project.title}}"></app-project-card>
+        <app-project-card title="{{project.title}}" description="{{project.description}}" imgSrc="{{project.imgSrc}}"></app-project-card>
       </div>
     </div>
-  </div>
   `,
   styleUrls: ['./home.component.css'],
   providers: [

@@ -3,10 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-    <footer>
-      <div class="container">
-        <p class="text-center">&copy; Copyright 2017</p>
-      </div>
+    <footer class="fixed-bottom">
+      <p class="text-center">&copy; Copyright 2017</p>
     </footer>
   `,
   styleUrls: ['./footer.component.css']

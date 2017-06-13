@@ -4,10 +4,10 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-project-card',
   template: `
   <div class="card" style="width: 20rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img *ngIf="imgSrc" class="card-img-top" src="{{imgSrc}}" alt="Card image cap" >
     <div class="card-block">
       <h4 class="card-title">{{title}}</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">{{description}}</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
@@ -17,6 +17,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ProjectCardComponent implements OnInit {
 
   @Input() title: string;
+  @Input() description: string;
+  @Input() imgSrc?: string;
 
   constructor() { }
 
