@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { QuickPresentationComponent } from './components/quick-presentation/quick-presentation.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     PageNotFoundComponent,
     HomeComponent,
     ContactComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    QuickPresentationComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      { path: 'homepage', component: HomepageComponent },
       { path: 'contact', component: ContactComponent },
       { path: '**', component: PageNotFoundComponent }
     ])

@@ -5,7 +5,15 @@ import { Project } from 'app/models/project';
 @Component({
   selector: 'app-home',
   template: `
-    <h1>Home</h1>
+    <section class="jumbotron">
+      <app-quick-presentation title="Jérémy Génard"
+                              [tags]="['Fullstack', 'Front-end', 'Microsoft MCP', 'Asp.Net MVC']"
+                              description="Développeur"
+                              imgSrc="assets/img/jeremy.png">
+      </app-quick-presentation>
+    </section>
+    <hr />
+    <h2>Projets</h2>
     <div class="row">
       <div class="col" *ngFor="let project of projects">
         <app-project-card title="{{project.title}}" description="{{project.description}}" imgSrc="{{project.imgSrc}}"></app-project-card>
