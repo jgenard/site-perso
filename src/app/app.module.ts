@@ -13,6 +13,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { QuickPresentationComponent } from './components/quick-presentation/quick-presentation.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { JumboComponent } from './components/jumbo/jumbo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     ProjectCardComponent,
     QuickPresentationComponent,
     HomepageComponent,
-    CarouselComponent
+    CarouselComponent,
+    JumboComponent
   ],
   imports: [
     BrowserModule,

@@ -5,14 +5,17 @@ import { Project } from 'app/models/project';
 @Component({
   selector: 'app-home',
   template: `
-    <app-carousel></app-carousel>
-    <hr />
-    <h2>Projets</h2>
-    <div class="row">
-      <div class="col" *ngFor="let project of projects">
-        <app-project-card title="{{project.title}}" description="{{project.description}}" imgSrc="{{project.imgSrc}}"></app-project-card>
+  <app-jumbo>
+    <h1 class="display-3">Projets</h1>
+      <p class="lead">Exemples de projet sur lesquels j'ai travaillés.</p>
+      <div class="row">
+        <div class="col" *ngFor="let project of projects">
+          <app-project-card title="{{project.title}}"
+                            description="{{project.description}}"
+                            imgSrc="{{project.imgSrc}}"></app-project-card>
+        </div>
       </div>
-    </div>
+  </app-jumbo>
   `,
   styleUrls: ['./home.component.css'],
   providers: [
