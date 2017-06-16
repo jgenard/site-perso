@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-project-card',
   template: `
-  <div class="card" style="width: 20rem;">
+  <div class="card mb-4" style="width: 20rem;">
     <img *ngIf="imgSrc" class="card-img-top" src="{{imgSrc}}" alt="Card image cap" >
     <div class="card-block">
       <h4 class="card-title">{{title}}</h4>

@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-jumbo',
   template: `
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" [style.background-color]="color">
       <div class="container-fluid">
         <ng-content></ng-content>
       </div>
