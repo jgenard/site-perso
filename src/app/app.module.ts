@@ -1,5 +1,6 @@
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,6 +15,7 @@ import { QuickPresentationComponent } from './components/quick-presentation/quic
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { JumboComponent } from './components/jumbo/jumbo.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,15 @@ import { JumboComponent } from './components/jumbo/jumbo.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
-      { path: 'homepage', component: HomepageComponent },
-      { path: 'contact', component: ContactComponent },
-      { path: '**', component: PageNotFoundComponent }
+      { path: 'home', component: HomeComponent, data: { animation: 'HomePage' } },
+      { path: 'homepage', component: HomepageComponent, data: { animation: 'HomePage' } },
+      { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' } },
+      { path: '**', component: PageNotFoundComponent, data: { animation: 'PageNotFound' } }
     ])
   ],
   providers: [],
